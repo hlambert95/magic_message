@@ -18,4 +18,3 @@ let house = () => {
             return "Slytherin";
     };
 };
-
