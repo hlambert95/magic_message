@@ -91,7 +91,27 @@ let wand = () => {
     return `${length()} and ${durability()} with a core of ${core()}`;
 };
 
+ //pet function that randomly selects a magical pet
+let pet = () => {
+    //assign num a random number 1-4
+    let num = Math.floor(Math.random() * 4) + 1;
     
+    //return correlating pet when number is assigned to num variable
+    switch(num) {
+        case 1:
+            return "Phoenix";
+            break;
+        case 2:
+            return "Graphorn";
+            break;
+        case 3:
+            return "Hippogriff";
+            break;
+        case 4:
+            return "Dragon";
+    };
+};
+   
 
 
-console.log(`${house()}, ${wand()}`);
+console.log(`${house()}, ${wand()}, ${pet()}`);
