@@ -62,7 +62,7 @@ let wand = () => {
                 return "fragile";
                 break;
             case 4:
-                return "hard";
+                return "unbreakable";
         };
     };
 
@@ -88,7 +88,7 @@ let wand = () => {
     };
 
     //concatinate the three variable of the wand;
-    return `${length()} and ${durability()} with a core of ${core()}`;
+    return `${length()}, ${durability()} with a core of ${core()}`;
 };
 
  //pet function that randomly selects a magical pet
@@ -111,7 +111,15 @@ let pet = () => {
             return "Dragon";
     };
 };
-   
 
+//prompt-sync module to require user enter
+const prompt = require('prompt-sync')();
 
-console.log(`${house()}, ${wand()}, ${pet()}`);
+//prompt for user's name
+const name = prompt('What is your name?');
+
+//concatinate user's name with house(), wand() and pet() functions
+const user = `Congratulations ${name}! Your Hogwarts House is: ${house()}. Your wand is ${wand()}. The magical pet to join you on your adventure is a ${pet()}!`;
+
+//print to terminal
+console.log(user);
